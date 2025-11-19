@@ -108,7 +108,7 @@ section:not(:last-child) {
 #front {
     margin-top: clamp(40px, 10vw, 80px);
     text-align: center;
-    padding: 40px 20px;
+    padding: clamp(40px, 4.5vw, 70px) 20px;
 }
 
 h1 {
