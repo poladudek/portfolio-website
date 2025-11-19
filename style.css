@@ -274,7 +274,7 @@ h1 {
     margin: 0 auto;
     position: relative;
     gap: clamp(20px, 5vw, 40px);
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .timeline-column {
@@ -286,7 +286,6 @@ h1 {
     padding-top: 10px;
     height: auto;
     flex-shrink: 0;
-    display: none;
 }
 
 
@@ -539,34 +538,32 @@ footer {
     font-size: clamp(0.75rem, 1.5vw, 0.8rem) !important;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 800px) {
+
     #about_me_content {
-        flex-direction: row;
+        flex-direction: column;
     }
-    
-    
-    #education_and_expirience_content {
-        flex-direction: row;
-    }
-    
+
     .timeline-column {
-        display: flex;
+        display: none;
     }
 
-}
+    #education_and_expirience_content {
+        flex-direction: column;
+        align-items: center;
+    }
 
-@media (max-width: 480px) {
-    body {
-        padding-top: 60px;
+    .info-column {
+        width: 100%;
+        align-items: center;
+        gap: 40px;
     }
-    
-    
-    #about_me_content:hover {
-        transform: scale(1.02);
+
+    .timeline-info {
+        width: 100%;
     }
-    
+
     .app-image:hover {
-        transform: scale(5);
+        transform: scale(6);
     }
-
 }
