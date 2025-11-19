@@ -198,12 +198,6 @@ h1 {
     position: relative;
 }
 
-#scroll-down-icon:hover {
-    color: #d6647a;
-    opacity: 1;
-    transform: translateY(4px);
-    filter: drop-shadow(0 5px 15px rgba(226,117,137,0.3));
-}
 
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
@@ -222,15 +216,19 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: clamp(20px, 5vw, 40px);
-    padding: clamp(20px, 5vw, 40px);
+    gap: 40px;
+    padding: 40px;
     background: #ffffff;
     border-radius: 30px;
     max-width: 1000px;
     margin: 40px auto;
     box-shadow: 0 10px 40px #ebd7d7;
     transition: all 0.3s ease;
-    flex-direction: column;
+}
+
+#about_me_content:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 10px #e38f9f;
 }
 
 .picture-style {
@@ -345,10 +343,9 @@ h1 {
 
 .timeline-info:hover {
     transition: transform 0.2s ease;
-    transform: translateX(0);
+    transform: translateX(10px);
     box-shadow: 0 8px 30px rgba(226, 117, 137, 0.25);
 }
-
 
 #projects {
     padding: 60px 20px;
@@ -393,7 +390,7 @@ h1 {
 .project_card:hover {
     transform: translateY(-10px) scale(1.03);
     box-shadow: 0 20px 40px rgba(226, 117, 137, 0.25);
-    background: linear-gradient(135deg, #ffffff, #fef4f7);
+    background: linear-gradient(135deg, #fff, #fef4f7);
 }
 
 .project_card.show {
